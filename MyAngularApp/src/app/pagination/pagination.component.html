@@ -1,0 +1,9 @@
+<div>
+  <ul  *ngFor = "let x of data | paginate:{itemsPerPage: 3, currentPage:p}">
+     <li>{{x.id}}</li> 
+     <li>{{x.name}}</li> 
+     <li>{{x.email}}</li> 
+  </ul>
+  <div><pagination-controls (pageChange)="p=$event"></pagination-controls> </div>
+</div>
+
